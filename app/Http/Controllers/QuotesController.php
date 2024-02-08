@@ -11,6 +11,7 @@ class QuotesController extends Controller
 
     public function __construct(KanyeQuotesManager $quotesManager)
     {
+        $this->middleware('api.token');
         $this->quotesManager = $quotesManager;
     }
 
